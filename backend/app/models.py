@@ -1,4 +1,5 @@
 from sqlalchemy import Column, Integer, String, DateTime, func, Text, Float
+from sqlalchemy.dialects.sqlite import JSON
 from .db import Base
 
 class Project(Base):
@@ -23,3 +24,13 @@ class Asset(Base):
     duration = Column(Float, nullable=True)
     size = Column(Integer, nullable=True)
     created_at = Column(DateTime, server_default=func.now())
+
+class VideoJob(Base):
+    __tablename__ = "video_jobs"
+    id = Column(Integer, primary_key=True, index=True)
+    status = Column(String(32), nullable=False, default="queued")
+    params = Column(Text, nullable=True)  # JSON string of job params
+    output_path = Column(String(1024), nullable=True)
+    error = Column(Text, nullable=True)
+    created_at = Column(DateTime, server_default=func.now())
+    updated_at = Column(DateTime, server_default=func.now(), onupdate=func.now())

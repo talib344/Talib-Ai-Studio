@@ -1,14 +1,17 @@
-- fastapi
-- uvicorn[standard]
-- SQLAlchemy>=1.4
-- aiosqlite
-- pydantic
-- python-dotenv
-- httpx
-- aiofiles
-- ffmpeg-python
-- python-multipart
-- alembic
-- respx
-- pytest
-- pytest-asyncio
+fastapi
+uvicorn[standard]
+SQLAlchemy>=1.4
+aiosqlite
+pydantic
+python-dotenv
+httpx
+aiofiles
+ffmpeg-python
+python-multipart
+alembic
+respx
+pytest
+pytest-asyncio
+moviepy
+imageio-ffmpeg
+numpy
