@@ -1,1 +1,3 @@
-from .api.routers import health, ai
+from . import health
+from . import ai
+from . import assets
