@@ -1,11 +1,14 @@
-fastapi
-uvicorn[standard]
-SQLAlchemy>=1.4
-aiosqlite
-pydantic
-python-dotenv
-httpx
-aiofiles
-ffmpeg-python
-python-multipart
-alembic
+- fastapi
+- uvicorn[standard]
+- SQLAlchemy>=1.4
+- aiosqlite
+- pydantic
+- python-dotenv
+- httpx
+- aiofiles
+- ffmpeg-python
+- python-multipart
+- alembic
+- respx
+- pytest
+- pytest-asyncio
